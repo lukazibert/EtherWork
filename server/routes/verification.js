@@ -7,7 +7,7 @@ verification.post("/verify", async (req, res) => {
   const description = req.body.description;
   const codeToVerify = req.body.code;
   // Set up your OpenAI API key
-  openai.api_key = "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";
+  openai.api_key = process.env.OPENAI_API_KEY;
 
   // Set up the endpoint URL
   const endpoint = "https://api.openai.com/v1/engines/codex/completions";
